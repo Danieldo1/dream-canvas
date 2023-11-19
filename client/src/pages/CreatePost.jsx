@@ -19,6 +19,30 @@ function CreatePost() {
   
   const generateImage = async () => {
     
+    if(form.prompt) {
+      try {
+        setGeneratingImg(true)
+        const response = await fetch('http://localhost:8080/api/v1/dalle', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({prompt: form.prompt})
+        })
+
+        const data = await response.json()
+
+        setForm({...form, photo: `data:image/jpeg;base64,${data.photo}`})
+  } catch (error) {
+    alert(error)
+  } finally {
+    setGeneratingImg(false)
+  }
+} else {
+  alert('Please enter a prompt')
+}
+
+
   }
 
   const handleSubmit = () => {
@@ -26,7 +50,6 @@ function CreatePost() {
   }
 
   const handleChange = (e) => {
-
     setForm({...form, [e.target.name]: e.target.value})
   }
 
