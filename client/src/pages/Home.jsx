@@ -41,7 +41,17 @@ function Home() {
               <h2 className="font-medium text-[#666e75] text-xl mb-3">Showing results for <span className="text-[#222328]">{searchText}</span></h2>
             )}
             <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
-
+              {searchText ? (
+                <RenderCards
+                  data={[]}
+                  title="No search results found"
+                />
+              ) : (
+                <RenderCards
+                  data={[]}
+                  title="No posts found"
+                />
+              )}
             </div>
           </>
         )}
