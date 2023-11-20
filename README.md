@@ -1,6 +1,6 @@
 
 # [DreamCanvas 🔗](https://dream-canvas.vercel.app/)
-![Landing page](https://i.ibb.co/RNPppdk/Screenshot-2023-11-20-at-9-06-10-AM.png)
+![Landing page](./client/src/assets/dreamcanvas.png)
 
 Hey there! 👋 Welcome to DreamCanvas, a creative and innovative project that combines the power of React, Vite, DALL-E AI, and MongoDB to bring your dreams to life in the form of unique and generated images. Whether you're an artist seeking inspiration or just curious about the capabilities of AI, DreamCanvas has got you covered!
 
